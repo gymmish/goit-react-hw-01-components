@@ -1,31 +1,43 @@
 import propTypes from 'prop-types';
 import defaultImg from './default-avatar.png';
 
+import {
+  ContainerProfile,
+  Description,
+  Avatar,
+  NameUser,
+  Tag,
+  Location,
+  Stat,
+  StatList,
+  StatItem,
+} from './Profile.styled';
+
 const Profile = ({ username, tag, location, avatar = defaultImg, stats }) => {
   return (
-    <div className>
-      <div className>
-        <img src={avatar} alt={username} />
-        <p className>{username}</p>
-        <p className>@{tag}</p>
-        <p className>{location}</p>
-      </div>
+    <ContainerProfile>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <NameUser>{username}</NameUser>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className>
-        <li>
-          <span className>Followers</span>
-          <span className>{stats.followers}</span>
-        </li>
-        <li>
-          <span className>Views</span>
-          <span className>{stats.views}</span>
-        </li>
-        <li>
-          <span className>Likes</span>
-          <span className>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stat>
+        <StatList>
+          <span>Followers </span>
+          <StatItem> {stats.followers}</StatItem>
+        </StatList>
+        <StatList>
+          <span>Views </span>
+          <StatItem> {stats.views}</StatItem>
+        </StatList>
+        <StatList>
+          <span>Likes </span>
+          <StatItem> {stats.likes}</StatItem>
+        </StatList>
+      </Stat>
+    </ContainerProfile>
   );
 };
 
