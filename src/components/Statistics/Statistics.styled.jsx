@@ -18,7 +18,3 @@ export const StatiisticList = styled.ul`
   justify-content: space-around;
   list-style: none;
 `;
-
-export const Li = styled.li`
-  background-color: blue;
-`;
