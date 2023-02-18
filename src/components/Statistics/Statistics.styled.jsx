@@ -13,8 +13,12 @@ export const StatisticsTitle = styled.h2`
   text-align: center;
 `;
 
-export const StatiisticList = styled.ul`
+export const StatisticList = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none;
 `;
+
+// export const StatisticLi = styled.li`
+
+// `;
